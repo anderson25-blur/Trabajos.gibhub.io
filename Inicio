@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anderson Mayta - Portafolio de Clases</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #111827;
+    }
+    .session-button {
+      width: 100%;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      margin: 10px 0;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .session-content {
+      display: none;
+      background-color: #e0f2fe;
+      padding: 10px 15px;
+      margin-top: -10px;
+      border-radius: 0 0 6px 6px;
+    }
+    .session-content a {
+      display: block;
+      margin: 5px 0;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Anderson Mayta Roncal</h1>
+  <p>Portafolio de Clases - Ingeniería de Sistemas</p>
+</header>
+
+<section>
+  <h2>Sesiones de Clases</h2>
+
+  <button class="session-button" onclick="toggleContent('sesion1')">Sesión 1 - Introducción</button>
+  <div class="session-content" id="sesion1">
+    <a href="https://example.com/trabajo1" target="_blank">Trabajo 1</a>
+    <a href="https://example.com/trabajo1b" target="_blank">Trabajo 1B</a>
+  </div>
+
+  <button class="session-button" onclick="toggleContent('sesion2')">Sesión 2 - Ciberseguridad</button>
+  <div class="session-content" id="sesion2">
+    <a href="https://example.com/ciberseguridad1" target="_blank">Análisis de riesgos</a>
+    <a href="https://example.com/ciberseguridad2" target="_blank">Reporte de amenazas</a>
+  </div>
+
+  <button class="session-button" onclick="toggleContent('sesion3')">Sesión 3 - Bases de Datos</button>
+  <div class="session-content" id="sesion3">
+    <a href="https://example.com/sql" target="_blank">Consulta SQL</a>
+    <a href="https://example.com/modelado" target="_blank">Modelo relacional</a>
+  </div>
+
+</section>
+
+<footer>
+  &copy; 2025 Anderson Mayta Roncal
+</footer>
+
+<script>
+  function toggleContent(id) {
+    const content = document.getElementById(id);
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
