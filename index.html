@@ -14,38 +14,24 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f0f4f8, #e0ecff);
+      background: #f0f4f8;
       color: #222;
     }
 
-    /* Encabezado con imagen de universidad */
+    /* Encabezado con nombre en 3D */
     header {
-      background-color: #0f172a;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-
-    header img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      filter: brightness(1.2) saturate(1.3);
-    }
-
-    /* Perfil centrado */
-    .profile {
       text-align: center;
-      margin-top: -80px;
-      position: relative;
-      z-index: 10;
+      padding: 50px 0;
+      background-color: #1f2937;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    .profile h1 {
-      margin: 12px 0 5px;
-      font-size: 26px;
-      color: #FFD700; /* Color dorado */
+    header h1 {
+      font-size: 60px;
+      color: #FFD700; /* Dorado */
       font-weight: 800;
+      text-transform: uppercase;
+      text-shadow: 4px 4px 10px rgba(0, 0, 255, 0.6), -4px -4px 10px rgba(255, 215, 0, 0.8); /* Efecto 3D */
     }
 
     .container {
@@ -99,6 +85,7 @@
       font-weight: 600;
       position: relative;
       padding-bottom: 6px;
+      transition: color 0.3s ease-in-out;
     }
 
     .card a::after {
@@ -112,18 +99,12 @@
       transition: width 0.3s ease-in-out;
     }
 
+    .card a:hover {
+      color: #FFD700;
+    }
+
     .card a:hover::after {
       width: 100%;
-    }
-
-    .card a:active {
-      animation: flash 0.4s ease-in-out;
-    }
-
-    @keyframes flash {
-      0% { background-color: #1d4ed8; color: white; transform: scale(1); }
-      50% { background-color: #FBBF24; transform: scale(1.05); }
-      100% { background-color: transparent; color: #1d4ed8; transform: scale(1); }
     }
 
     footer {
@@ -136,7 +117,7 @@
       box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
     }
 
-    /* Elementos adicionales de diseño de ingeniería */
+    /* Estilo de arquitectura */
     .technical-border {
       border-top: 2px solid #FBBF24;
       padding-top: 10px;
@@ -155,19 +136,19 @@
       border-left: 6px solid #3B82F6;
     }
 
+    /* Efectos al pasar el mouse sobre las semanas */
+    .card:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Encabezado con imagen de la universidad -->
+  <!-- Encabezado con nombre en 3D -->
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_UPLA.png/800px-Logo_UPLA.png" alt="Logo UPLA">
-  </header>
-
-  <!-- Perfil -->
-  <div class="profile">
     <h1>Anderson Mayta Roncal</h1>
-  </div>
+  </header>
 
   <!-- Contenido -->
   <div class="container">
