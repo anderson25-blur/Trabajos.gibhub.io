@@ -41,19 +41,10 @@
       z-index: 10;
     }
 
-    .profile img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 5px solid white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      background-color: #fff;
-    }
-
     .profile h1 {
       margin: 12px 0 5px;
       font-size: 26px;
-      color: #0f172a;
+      color: #FFD700; /* Color dorado */
       font-weight: 800;
     }
 
@@ -74,37 +65,40 @@
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
 
     .card {
-      background: linear-gradient(145deg, #ffffff, #e3e9f0);
+      background: linear-gradient(145deg, #3B82F6, #2563EB);
       border-radius: 16px;
       padding: 25px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
       position: relative;
       overflow: hidden;
-      border-left: 6px solid #2563eb;
+      border-left: 6px solid #FBBF24;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
     .card:hover {
-      transform: translateY(-5px) scale(1.01);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 25px 45px rgba(0,0,0,0.4);
     }
 
     .card h2 {
-      font-size: 20px;
-      color: #1e3a8a;
+      font-size: 22px;
+      color: white;
       margin-bottom: 15px;
+      font-weight: 700;
     }
 
     .card a {
       display: block;
       text-decoration: none;
-      color: #1d4ed8;
+      color: white;
       margin: 8px 0;
       font-weight: 600;
       position: relative;
+      padding-bottom: 6px;
     }
 
     .card a::after {
@@ -114,7 +108,7 @@
       bottom: 0;
       width: 0%;
       height: 3px;
-      background-color: #3b82f6;
+      background-color: #FBBF24;
       transition: width 0.3s ease-in-out;
     }
 
@@ -128,7 +122,7 @@
 
     @keyframes flash {
       0% { background-color: #1d4ed8; color: white; transform: scale(1); }
-      50% { background-color: #3b82f6; transform: scale(1.05); }
+      50% { background-color: #FBBF24; transform: scale(1.05); }
       100% { background-color: transparent; color: #1d4ed8; transform: scale(1); }
     }
 
@@ -141,18 +135,37 @@
       margin-top: 50px;
       box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
     }
+
+    /* Elementos adicionales de diseño de ingeniería */
+    .technical-border {
+      border-top: 2px solid #FBBF24;
+      padding-top: 10px;
+      margin-top: 20px;
+    }
+
+    .technical-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .technical-grid .card {
+      background-color: #1e3a8a;
+      color: white;
+      border-left: 6px solid #3B82F6;
+    }
+
   </style>
 </head>
 <body>
 
   <!-- Encabezado con imagen de la universidad -->
   <header>
-    <img src="https://chat.openai.com/mnt/data/logo_upla.png" alt="Logo UPLA">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_UPLA.png/800px-Logo_UPLA.png" alt="Logo UPLA">
   </header>
 
   <!-- Perfil -->
   <div class="profile">
-    <img src="https://chat.openai.com/mnt/data/foto_anderson.jpg" alt="Foto de Anderson">
     <h1>Anderson Mayta Roncal</h1>
   </div>
 
@@ -187,7 +200,7 @@
         <h2>Semana 4</h2>
         <a href="#">Análisis de Riesgos</a>
         <a href="#">Reporte de Amenazas</a>
-      </div
+      </div>
 
       <!-- Semana 5 -->
       <div class="card">
@@ -201,7 +214,7 @@
         <h2>Semana 6</h2>
         <a href="#">Análisis de Riesgos</a>
         <a href="#">Reporte de Amenazas</a>
-      </div
+      </div>
 
       <!-- Semana 7 -->
       <div class="card">
@@ -215,7 +228,7 @@
         <h2>Semana 8</h2>
         <a href="#">Análisis de Riesgos</a>
         <a href="#">Reporte de Amenazas</a>
-      </div
+      </div>
 
       <!-- Semana 9 -->
       <div class="card">
@@ -229,7 +242,7 @@
         <h2>Semana 10</h2>
         <a href="#">Análisis de Riesgos</a>
         <a href="#">Reporte de Amenazas</a>
-      </div
+      </div>
 
       <!-- Semana 11 -->
       <div class="card">
@@ -239,6 +252,25 @@
       </div>
 
     </div>
+
+    <!-- Sección adicional para diseños técnicos -->
+    <div class="technical-border">
+      <h2>Proyectos de Ingeniería</h2>
+      <div class="technical-grid">
+
+        <div class="card">
+          <h2>Proyecto 1</h2>
+          <a href="#">Descripción del Proyecto</a>
+        </div>
+
+        <div class="card">
+          <h2>Proyecto 2</h2>
+          <a href="#">Descripción del Proyecto</a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
   <footer>
@@ -247,6 +279,7 @@
 
 </body>
 </html>
+
 
 
 
