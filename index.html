@@ -6,142 +6,145 @@
   <title>Portafolio - Anderson Mayta</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      transition: all 0.3s ease-in-out;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f0f4f8;
-      color: #222;
-    }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+  }
 
-    /* Encabezado con nombre de la universidad en 3D */
-    header {
-      text-align: center;
-      padding: 50px 0;
-      background-color: #1f2937;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
+  header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
 
-    header h1 {
-      font-size: 60px;
-      color: #FFD700; /* Dorado */
-      font-weight: 800;
-      text-transform: uppercase;
-      text-shadow: 4px 4px 10px rgba(0, 0, 255, 0.6), -4px -4px 10px rgba(255, 215, 0, 0.8); /* Efecto 3D */
-    }
+  header h1 {
+    font-size: 64px;
+    color: #facc15; /* Amarillo dorado */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  }
 
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
+  .container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
 
-    .container > h2 {
-      text-align: center;
-      color: #1d4ed8;
-      font-size: 28px;
-      margin-bottom: 30px;
-      font-weight: 700;
-    }
+  .container > h2 {
+    text-align: center;
+    color: #0f172a;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    border-bottom: 3px solid #facc15;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
-    }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+  }
 
-    .card {
-      background: linear-gradient(145deg, #3B82F6, #2563EB);
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
-      position: relative;
-      overflow: hidden;
-      border-left: 6px solid #FBBF24;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
+  .card {
+    background: linear-gradient(to bottom right, #1e3a8a, #3b82f6);
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    position: relative;
+    overflow: hidden;
+    border-left: 6px solid #facc15;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 
-    .card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 25px 45px rgba(0,0,0,0.4);
-    }
+  .card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+  }
 
-    .card h2 {
-      font-size: 22px;
-      color: white;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
+  .card h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
 
-    .card a {
-      display: block;
-      text-decoration: none;
-      color: white;
-      margin: 8px 0;
-      font-weight: 600;
-      position: relative;
-      padding-bottom: 6px;
-      transition: color 0.3s ease-in-out;
-    }
+  .card a {
+    display: block;
+    text-decoration: none;
+    color: #e0f2fe;
+    margin: 10px 0;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+  }
 
-    .card a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0%;
-      height: 3px;
-      background-color: #FBBF24;
-      transition: width 0.3s ease-in-out;
-    }
+  .card a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #facc15;
+    transition: width 0.3s ease-in-out;
+  }
 
-    .card a:hover {
-      color: #FFD700;
-    }
+  .card a:hover {
+    color: #facc15;
+  }
 
-    .card a:hover::after {
-      width: 100%;
-    }
+  .card a:hover::after {
+    width: 100%;
+  }
 
-    footer {
-      text-align: center;
-      background-color: #1e293b;
-      color: white;
-      padding: 18px;
-      font-size: 15px;
-      margin-top: 50px;
-      box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
-    }
+  footer {
+    text-align: center;
+    background: #0f172a;
+    color: #d1d5db;
+    padding: 25px;
+    font-size: 16px;
+    margin-top: 60px;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+  }
 
-    /* Estilo de arquitectura */
-    .technical-border {
-      border-top: 2px solid #FBBF24;
-      padding-top: 10px;
-      margin-top: 20px;
-    }
+  .technical-border {
+    border-top: 3px solid #facc15;
+    padding-top: 25px;
+    margin-top: 40px;
+  }
 
-    .technical-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
+  .technical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
 
-    .technical-grid .card {
-      background-color: #1e3a8a;
-      color: white;
-      border-left: 6px solid #3B82F6;
-    }
+  .technical-grid .card {
+    background: linear-gradient(to right, #0ea5e9, #0369a1);
+    color: white;
+    border-left: 6px solid #0f766e;
+  }
 
-    /* Efectos al pasar el mouse sobre las semanas */
-    .card:hover {
-      transform: scale(1.1) rotate(2deg);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    }
-  </style>
+  .technical-grid .card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+  }
+</style>
+
 </head>
 <body>
 
